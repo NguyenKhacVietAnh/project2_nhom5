@@ -1,0 +1,249 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.navbar {
+  background-color: rgb(255, 255, 255, 0);
+  /* display: flex; */
+  width: 100%;
+  height: 130px;
+  padding: 10px 20px 20px 20px;
+  /* justify-content: space-between; */
+  display: grid;
+  /* grid-template-columns: repeat(3, 1fr);  chia làm 3 cột bằng nhau*/
+  grid-template-columns: 1fr 4fr 2fr;
+  grid-gap: 10px;
+  transition: 1.5s;
+  z-index: 2;
+}
+.navbar .logo {
+  margin: auto;
+  border: 2px black solid;
+}
+.navbar .menu {
+  padding-top: 20px;
+  font-size: 18px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.3fr 1fr 0.5fr 1.5fr;
+  gap: 20px;
+}
+li {
+  list-style: none;
+}
+.search {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  gap: 0 10px;
+}
+.search .icon {
+  height: 50px;
+  display: flex;
+  margin: auto;
+}
+.icon li {
+  margin-right: 20px;
+}
+.searchh {
+  width: 250px;
+  height: 50px;
+  border-radius: 8px;
+  border: 1px rgb(46, 42, 42) solid;
+  padding: 20px;
+  background-color: rgb(255, 255, 255, 0);
+}
+
+/* slide show */
+.slider {
+  max-width: 100vw;
+  /* width:1519px; */
+  width: 100%;
+  /* reponsity thì chỉ cần giảm height xuống */
+  height: 690px;
+  position: absolute;
+  top: -2px;
+  /* ẩn bỏ phần ngoài khung hình nhưng vẫn chiếm diện tích */
+  overflow: hidden;
+  background-color: #000000;
+}
+.slider .list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  width: max-content;
+  transition: 1s;
+}
+.list img {
+  max-width: 100vw;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* cover không chấp nhận khoảng trắng */
+  /* contain chấp nhận khoảng trắng */
+}
+.slider .buttons {
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.buttons button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(63, 70, 76, 0.5);
+  color: rgb(0, 0, 0);
+  border: none;
+  font-family: monospace;
+  font-weight: bold;
+}
+.slider .dots {
+  position: absolute;
+  bottom: 10px;
+  color: aliceblue;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.dots li {
+  list-style-type: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #efe8e8;
+  border-radius: 50%;
+  background-color: rgb(86, 89, 91, 0.5);
+  margin: 10px;
+  transition: 1s;
+}
+.dots li.active {
+  width: 50px;
+  border-radius: 20px;
+}
+
+/* .container a {
+  position: absolute;
+  bottom: 0;
+  transform: 2s;
+} */
+
+.slider {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+#content {
+  position: absolute;
+  top: 690px;
+}
+#content .sub_content {
+  padding: 20px 40px 20px 40px;
+}
+.title hr {
+  width: 60%;
+  margin: auto;
+}
+.title h2 {
+  text-align: center;
+  padding: 20px;
+}
+.row_sp {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.row_sp img {
+  width: 100%;
+}
+.row_sp .sp {
+  width: 100%;
+  /* background-color: #807979; */
+  /* padding: 10px; */
+}
+.row_sp .sp img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+}
+.row_sp .name_sp {
+  width: 200px;
+  margin: 10px 0;
+  font-size: 20px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* Số dòng tối đa */
+  overflow: hidden; /* Ẩn phần văn bản vượt quá */
+  text-overflow: ellipsis; /* Thêm dấu ... nếu có nội dung bị cắt */
+}
+.row_sp .vnd {
+  font-size: 22px;
+  color: rgb(192, 24, 24);
+}
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+/* footer */
+#footer {
+  width: 100%;
+  /* background-color: #afacac; */
+}
+#footer .container {
+  display: grid;
+  grid-template-columns: 5fr 4.5fr 5fr;
+  text-align: left;
+  /* padding: 0 30px; */
+}
+
+.container_address p,
+.container_hotline p {
+  margin-bottom: 8px;
+}
+#footer .title {
+  text-align: center;
+  background-color: #000000;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+.container_hotline h4 {
+  color: #4f4b4b;
+}
+.container_hotline {
+  padding: 30px 15%;
+  background-color: #ffffff;
+}
+.container_address {
+  padding: 30px 15%;
+  background-color: #000000;
+  color: #ffffff;
+}
+.container_address img {
+  width: 20px;
+  margin-right: 5px;
+}
+.container_address a {
+  color: rgb(222, 15, 15);
+}
+.container_hotline .vanh {
+  padding: 0 20px;
+}
+.container_address .vanh {
+  padding: 0 10px;
+}
+.container_hotline .list_icon {
+  display: flex;
+}
+.list_icon i {
+  font-size: 20px;
+  padding: 5px 10px;
+}
